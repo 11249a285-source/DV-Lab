@@ -10,8 +10,6 @@ ALGORITHM:
 7. Add a title, axis labels, and color gradient.
 
 PROGRAM:
-library(ggplot2)
-
 students <- data.frame(
   Student = c("Alice", "Bob", "Charlie", "Diana", "Eve",
               "Frank", "Grace", "Henry", "Ivy", "Jack"),
@@ -22,23 +20,23 @@ students <- data.frame(
             5.5, 3.5, 7.0, 4.0, 5.0)
 )
 
-ggplot(students, aes(x = Hours, y = Math, label = Student)) +
-  geom_point(aes(color = Math), size = 4) +
-  geom_smooth(
-    method = "lm",
-    se = TRUE,
-    color = "steelblue",
-    linetype = "dashed"
-  ) +
-  geom_text(vjust = -1, size = 3) +
-  scale_color_gradient(low = "orange", high = "darkblue") +
-  labs(
-    title = "Hours Studied vs Math Score",
-    x = "Hours Studied",
-    y = "Math Score"
-  ) +
-  theme_minimal()
+a_grades <- c(
+  Math = sum(students$Math >= 85),
+  Science = sum(students$Science >= 85),
+  English = sum(students$English >= 85)
+)
 
+pie(
+  a_grades,
+  main = "A-Grade Distribution by Subject",
+  col = c("#3498db", "#2ecc71", "#e74c3c"),
+  labels = paste(
+    names(a_grades),
+    "\n",
+    a_grades,
+    "students"
+  )
+)
 
 RESULT:
 The scatter plot was successfully generated to examine the relationship between hours studied and Mathematics marks. A regression line was included to show the overall trend.
