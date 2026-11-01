@@ -14,9 +14,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 data = {
     "student": [
-        "thrisha", "vaishnavi", "dhanushka", "dhatri",
-        "ravi", "bharath", "ani", "prudhvi",
-        "ammu", "purushotham"
+         "Robert", "Tom", "Elite", "John",
+        "Ben", "Peter", "Sadie", "Parker",
+        "Michael", "Richard"
     ],
     "math": [93, 83, 74, 96, 84, 91, 98, 83, 74, 99],
     "science": [82, 94, 72, 84, 95, 83, 77, 88, 97, 88],
