@@ -1,13 +1,12 @@
-AIM: To analyze the relationship between hours studied and Mathematics marks using a scatter plot with a regression line.
+AIM: To analyze the distribution of A-grade students in Mathematics, Science, and English using a pie chart.
 
 ALGORITHM:
-1. Load the ggplot2 package.
-2. Create the student dataset.
-3. Plot hours studied against Mathematics marks.
-4. Color the points according to Mathematics marks.
-5. Add a linear regression line and confidence interval.
-6. Label the points with student names.
-7. Add a title, axis labels, and color gradient.
+1.Create the student dataset.
+2.Calculate the number of students who scored 85 or above in each subject.
+3.Store the A-grade counts in a vector.
+4.Generate a pie chart using the pie() function.
+5.Assign different colors to each subject.
+6.Add a title and labels displaying the subject names and number of students.
 
 PROGRAM:
 students <- data.frame(
@@ -39,4 +38,4 @@ pie(
 )
 
 RESULT:
-The scatter plot was successfully generated to examine the relationship between hours studied and Mathematics marks. A regression line was included to show the overall trend.
+The pie chart was successfully generated to represent the distribution of A-grade students in Mathematics, Science, and English. Different colors and labels were used to distinguish the subjects and display the number of students in each subject.
